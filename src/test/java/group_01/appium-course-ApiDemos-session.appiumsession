@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "caps": [
+    {
+      "type": "text",
+      "name": "appium:app",
+      "value": "\\Users\\kenny\\OneDrive\\Documents\\Appium course Rahul Shetty\\resources\\ApiDemos-debug.apk"
+    },
+    {
+      "type": "text",
+      "name": "appium:deviceName",
+      "value": "TestDevice1"
+    },
+    {
+      "type": "text",
+      "name": "platformName",
+      "value": "android"
+    },
+    {
+      "type": "text",
+      "name": "appium:automationName",
+      "value": "UIAutomator2"
+    }
+  ],
+  "server": {
+    "local": {},
+    "remote": {
+      "hostname": "127.0.0.1",
+      "port": "4723"
+    },
+    "sauce": {
+      "dataCenter": "us-west-1"
+    },
+    "headspin": {},
+    "browserstack": {},
+    "lambdatest": {},
+    "advanced": {},
+    "bitbar": {},
+    "kobiton": {},
+    "perfecto": {},
+    "pcloudy": {},
+    "testingbot": {},
+    "experitest": {},
+    "roboticmobi": {},
+    "remotetestkit": {},
+    "mobitru": {}
+  },
+  "serverType": "remote",
+  "visibleProviders": []
+}

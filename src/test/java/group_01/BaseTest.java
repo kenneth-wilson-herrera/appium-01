@@ -67,6 +67,14 @@ public class BaseTest {
 			));
 	}
 	
+	public void dragDropAction(WebElement source, int endX, int intY) {
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
+			    "elementId", ((RemoteWebElement) source).getId(),
+			    "endX", endX,
+			    "endY", intY
+			));
+	}
+	
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
