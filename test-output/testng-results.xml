@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-11T20:05:11 MST" name="Default suite" finished-at="2024-03-11T20:05:25 MST" duration-ms="13241">
+  <suite started-at="2024-03-13T21:01:27 MST" name="Default suite" finished-at="2024-03-13T21:01:51 MST" duration-ms="24754">
     <groups>
     </groups>
-    <test started-at="2024-03-11T20:05:11 MST" name="Default test" finished-at="2024-03-11T20:05:25 MST" duration-ms="13241">
-      <class name="group_01.DragDropDemo">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.DragDropDemo@71d44a3]" started-at="2024-03-11T20:05:11 MST" name="ConfigureAppium" finished-at="2024-03-11T20:05:16 MST" duration-ms="4876" status="PASS">
+    <test started-at="2024-03-13T21:01:27 MST" name="Default test" finished-at="2024-03-13T21:01:51 MST" duration-ms="24754">
+      <class name="group_01.AssignmentS7">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-13T21:01:27 MST" name="ConfigureAppium" finished-at="2024-03-13T21:01:34 MST" duration-ms="7617" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="DragDropTest()[pri:0, instance:group_01.DragDropDemo@71d44a3]" started-at="2024-03-11T20:05:16 MST" name="DragDropTest" finished-at="2024-03-11T20:05:24 MST" duration-ms="8057" status="PASS">
+        <test-method signature="AlertDialogsTest()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-13T21:01:34 MST" name="AlertDialogsTest" finished-at="2024-03-13T21:01:51 MST" duration-ms="16752" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DragDropTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.DragDropDemo@71d44a3]" started-at="2024-03-11T20:05:24 MST" name="tearDown" finished-at="2024-03-11T20:05:25 MST" duration-ms="281" status="PASS">
+        </test-method> <!-- AlertDialogsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-13T21:01:51 MST" name="tearDown" finished-at="2024-03-13T21:01:51 MST" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- group_01.DragDropDemo -->
+      </class> <!-- group_01.AssignmentS7 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
