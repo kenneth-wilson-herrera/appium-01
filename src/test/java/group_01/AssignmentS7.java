@@ -31,6 +31,31 @@ public class AssignmentS7 extends BaseTest{
 		driver.findElement(AppiumBy.accessibilityId("Alert Dialogs")).click();
 		
 	//OK Cancel dialog with a message
+		//optionOne();
+		
+	//OK Cancel dialog with a long message
+		//optionTwo();
+		
+	//OK Cancel dialog with ultra long message
+		//optionThree();
+		
+	//List dialog
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/text1")).getText(), "Command one");
+		driver.findElement(AppiumBy.id("android:id/text1")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("0 , Command one"), true);
+		
+		Thread.sleep(3000);
+//		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
+//		
+//		dragDropAction(source, 1050, 900);
+//		Thread.sleep(3000);
+//		String result = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_result_text")).getText();
+//		Assert.assertEquals(result, "Dropped!");
+	}
+	
+	private void optionOne() {
+		//OK Cancel dialog with a message
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[1]")).click();
 		String message1 = driver.findElement(AppiumBy.id("android:id/alertTitle")).getText();
 		Assert.assertEquals(message1.contains("Lorem ipsum dolor"), true);
@@ -39,8 +64,9 @@ public class AssignmentS7 extends BaseTest{
 		//Tap Cancel
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[1]")).click();
 		driver.findElement(AppiumBy.id("android:id/button2")).click();
-		
-	//OK Cancel dialog with a long message
+	}
+	private void optionTwo() {
+		//OK Cancel dialog with a long message
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[2]")).click();
 		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Header title");
 		//Tap Something
@@ -54,16 +80,25 @@ public class AssignmentS7 extends BaseTest{
 		//Tap Cancel
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[2]")).click();
 		driver.findElement(AppiumBy.id("android:id/button2")).click();
-		
-		Thread.sleep(3000);
-//		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
-//		
-//		dragDropAction(source, 1050, 900);
-//		Thread.sleep(3000);
-//		String result = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_result_text")).getText();
-//		Assert.assertEquals(result, "Dropped!");
 	}
-	
-	
+	private void optionThree() {
+		//OK Cancel dialog with ultra long message
+		driver.findElement(AppiumBy.accessibilityId("OK Cancel dialog with ultra long message")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Header title");
+		swipeAction(driver.findElement(AppiumBy.id("android:id/message")), "up");
+		//Tap Something
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[@resource-id='android:id/button3']")).click();
+				
+		//Tap OK
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[3]")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/message")).getText().contains("Plasa"), true);
+		swipeAction(driver.findElement(AppiumBy.id("android:id/message")), "down");
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[@resource-id='android:id/button1']")).click();
+				
+		//Tap Cancel
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[@content-desc='OK Cancel dialog with ultra long message']")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/message")).getText().contains("mako"), true);
+		driver.findElement(AppiumBy.id("android:id/button2")).click();
+	}
 	
 }
