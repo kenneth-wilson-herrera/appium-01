@@ -4,9 +4,13 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Arrays;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.PointerInput.MouseButton;
+import org.openqa.selenium.interactions.PointerInput.Origin;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -73,6 +77,16 @@ public class BaseTest {
 			    "endX", endX,
 			    "endY", intY
 			));
+	}
+	public void action_clickOnPosition(int pointA_X, int pointA_Y) { 
+		PointerInput finger = new PointerInput(org.openqa.selenium.interactions.PointerInput.Kind.TOUCH, "finger"); 
+		org.openqa.selenium.interactions.Sequence clickPosition = new org.openqa.selenium.interactions.Sequence(finger, 1); 
+		clickPosition 
+		.addAction(finger.createPointerMove(Duration.ZERO, Origin.viewport(), 
+				pointA_X,pointA_Y)) .addAction(finger.createPointerDown(MouseButton.LEFT.asArg())) 
+		.addAction(finger.createPointerUp(MouseButton.LEFT.asArg())); 
+		
+			driver.perform(Arrays.asList(clickPosition));
 	}
 	
 	@AfterClass

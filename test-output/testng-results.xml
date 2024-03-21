@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-18T21:57:09 MST" name="Default suite" finished-at="2024-03-18T21:57:25 MST" duration-ms="16404">
+  <suite started-at="2024-03-20T21:28:59 MST" name="Default suite" finished-at="2024-03-20T21:29:15 MST" duration-ms="15618">
     <groups>
     </groups>
-    <test started-at="2024-03-18T21:57:09 MST" name="Default test" finished-at="2024-03-18T21:57:25 MST" duration-ms="16404">
+    <test started-at="2024-03-20T21:28:59 MST" name="Default test" finished-at="2024-03-20T21:29:15 MST" duration-ms="15618">
       <class name="group_01.AssignmentS7">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-18T21:57:09 MST" name="ConfigureAppium" finished-at="2024-03-18T21:57:16 MST" duration-ms="6837" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-03-20T21:28:59 MST" name="ConfigureAppium" finished-at="2024-03-20T21:29:05 MST" duration-ms="5594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="AlertDialogsTest()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-18T21:57:16 MST" name="AlertDialogsTest" finished-at="2024-03-18T21:57:25 MST" duration-ms="9260" status="PASS">
+        <test-method signature="AlertDialogsTest()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-03-20T21:29:05 MST" name="AlertDialogsTest" finished-at="2024-03-20T21:29:15 MST" duration-ms="9721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AlertDialogsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.AssignmentS7@7b98f307]" started-at="2024-03-18T21:57:25 MST" name="tearDown" finished-at="2024-03-18T21:57:25 MST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-03-20T21:29:15 MST" name="tearDown" finished-at="2024-03-20T21:29:15 MST" duration-ms="271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
