@@ -46,11 +46,12 @@ public class AssignmentS7 extends BaseTest{
 		//optionThree();
 		
 	//List dialog
-		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
-		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/text1")).getText(), "Command one");
-		driver.findElement(AppiumBy.id("android:id/text1")).click();
-		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("0 , Command one"), true);
-		action_clickOnPosition(300, 400);
+		//optionFour();
+		
+	//Progress dialog
+		driver.findElement(AppiumBy.accessibilityId("Progress dialog")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Header title");
+		action_clickOnPosition(950, 1650);
 		
 		Thread.sleep(3000);
 //		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
@@ -106,6 +107,33 @@ public class AssignmentS7 extends BaseTest{
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[@content-desc='OK Cancel dialog with ultra long message']")).click();
 		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/message")).getText().contains("mako"), true);
 		driver.findElement(AppiumBy.id("android:id/button2")).click();
+	}
+	private void optionFour() {
+		//List dialog
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
+		//Command one
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/text1")).getText(), "Command one");
+		driver.findElement(AppiumBy.id("android:id/text1")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("0 , Command one"), true);
+		action_clickOnPosition(300, 400);
+		//Command two
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[2]")).getText(), "Command two");
+		driver.findElement(AppiumBy.xpath("//android.widget.TextView[2]")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("1 , Command two"), true);
+		action_clickOnPosition(300, 400);
+		//Command three
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[3]")).getText(), "Command three");
+		driver.findElement(AppiumBy.xpath("//android.widget.TextView[3]")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("2 , Command three"), true);
+		action_clickOnPosition(300, 400);
+		//Command three
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/select_button")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[4]")).getText(), "Command four");
+		driver.findElement(AppiumBy.xpath("//android.widget.TextView[4]")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("3 , Command four"), true);
+		action_clickOnPosition(300, 400);
 	}
 
 }
