@@ -49,10 +49,18 @@ public class AssignmentS7 extends BaseTest{
 		//optionFour();
 		
 	//Progress dialog
-		driver.findElement(AppiumBy.accessibilityId("Progress dialog")).click();
-		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Header title");
-		action_clickOnPosition(950, 1650);
+		//optionFive();
 		
+		
+	//Single choice list
+		driver.findElement(AppiumBy.accessibilityId("Single choice list")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Single choice list");
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).getAttribute("checked").equals("true"));
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Satellite']")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Traffic']")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[4]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).click();
+		driver.findElement(AppiumBy.id("android:id/button1")).click();
 		Thread.sleep(3000);
 //		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
 //		
@@ -134,6 +142,13 @@ public class AssignmentS7 extends BaseTest{
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[4]")).click();
 		Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id='android:id/message']")).getText().contains("3 , Command four"), true);
 		action_clickOnPosition(300, 400);
+	}
+	
+	private void optionFive() {
+		//Progress dialog
+		driver.findElement(AppiumBy.accessibilityId("Progress dialog")).click();
+		//Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Header title']")).getText(), "Header title");
+		action_clickOnPosition(500, 1000);
 	}
 
 }
