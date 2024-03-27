@@ -53,14 +53,11 @@ public class AssignmentS7 extends BaseTest{
 		
 		
 	//Single choice list
-		driver.findElement(AppiumBy.accessibilityId("Single choice list")).click();
-		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Single choice list");
-		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).getAttribute("checked").equals("true"));
-		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Satellite']")).click();
-		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Traffic']")).click();
-		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[4]")).click();
-		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).click();
-		driver.findElement(AppiumBy.id("android:id/button1")).click();
+		//optionSix();
+		
+	//Repeat alarm
+		optionSeven();
+		
 		Thread.sleep(3000);
 //		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
 //		
@@ -149,6 +146,36 @@ public class AssignmentS7 extends BaseTest{
 		driver.findElement(AppiumBy.accessibilityId("Progress dialog")).click();
 		//Assert.assertEquals(driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Header title']")).getText(), "Header title");
 		action_clickOnPosition(500, 1000);
+	}
+	
+	private void optionSix() {
+		//Single choice list
+		driver.findElement(AppiumBy.accessibilityId("Single choice list")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Single choice list");
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).getAttribute("checked").equals("true"));
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Satellite']")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Traffic']")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[4]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Map']")).click();
+		driver.findElement(AppiumBy.id("android:id/button1")).click();
+	}
+	
+	private void optionSeven() {
+		//Repeat alarm
+		driver.findElement(AppiumBy.accessibilityId("Repeat alarm")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Repeat alarm");
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Every Tuesday']")).getAttribute("checked").equals("true"));
+		//Not the same		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Every Tuesday']")).isSelected());
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[1]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[2]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[3]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[4]")).click();
+		driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[5]")).click();
+		driver.findElement(AppiumBy.id("android:id/button1")).click();
+		
+		driver.findElement(AppiumBy.accessibilityId("Repeat alarm")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Every Tuesday']")).getAttribute("checked").equals("false"));
+		driver.findElement(AppiumBy.id("android:id/button2")).click();
 	}
 
 }
