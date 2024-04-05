@@ -38,6 +38,7 @@ public class BaseTest {
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("TestDevice1");
 		options.setApp("\\Users\\kenny\\OneDrive\\Documents\\Appium course Rahul Shetty\\resources\\ApiDemos-debug.apk");
+		options.setCapability("autoGrantPermissions", true);
 		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

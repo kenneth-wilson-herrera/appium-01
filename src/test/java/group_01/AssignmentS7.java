@@ -37,26 +37,38 @@ public class AssignmentS7 extends BaseTest{
 		driver.findElement(AppiumBy.accessibilityId("Alert Dialogs")).click();
 		
 	//OK Cancel dialog with a message
-		//optionOne();
+		optionOne();
 		
 	//OK Cancel dialog with a long message
-		//optionTwo();
+		optionTwo();
 		
 	//OK Cancel dialog with ultra long message
-		//optionThree();
+		optionThree();
 		
 	//List dialog
-		//optionFour();
+		optionFour();
 		
 	//Progress dialog
-		//optionFive();
+		optionFive();
 		
 		
 	//Single choice list
-		//optionSix();
+		optionSix();
 		
 	//Repeat alarm
 		optionSeven();
+		
+	//Send Call to VoiceMail
+		optionEight();
+		
+	//Text Entry dialog
+		optionNine();
+		
+	//OK Cancel dialog with traditional theme
+		optionTen();
+		
+	//OK Cancel dialog with Holo Light theme
+		optionEleven();
 		
 		Thread.sleep(3000);
 //		WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
@@ -175,6 +187,46 @@ public class AssignmentS7 extends BaseTest{
 		
 		driver.findElement(AppiumBy.accessibilityId("Repeat alarm")).click();
 		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='Every Tuesday']")).getAttribute("checked").equals("false"));
+		driver.findElement(AppiumBy.id("android:id/button2")).click();
+	}
+	private void optionEight() {
+		//Send Call to VoiceMail
+		driver.findElement(AppiumBy.accessibilityId("Send Call to VoiceMail")).click();
+		Assert.assertEquals(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText(), "Send Call to VoiceMail");
+		action_clickOnPosition(300, 400);
+	}
+	
+	private void optionNine() {
+		//Text Entry dialog
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[@content-desc='Text Entry dialog']")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.EditText[@resource-id='io.appium.android.apis:id/username_edit']")).isDisplayed());
+		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@resource-id='io.appium.android.apis:id/username_edit']")).sendKeys("Zeradias");
+		Assert.assertTrue(driver.findElement(AppiumBy.id("io.appium.android.apis:id/password_edit")).getAttribute("password").equals("true"));
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/password_edit")).sendKeys("Zerato");
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[@resource-id='android:id/button1']")).click();
+	}
+	
+	private void optionTen() {
+		//OK Cancel dialog with traditional theme
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/two_buttons_old_school")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.LinearLayout[@resource-id='android:id/parentPanel']")).getAttribute("enabled").equals("true"));
+		//Click OK
+		driver.findElement(AppiumBy.id("android:id/button1")).click();
+		//Click Cancel
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[10]")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText().contains("aie"));
+		driver.findElement(AppiumBy.id("android:id/button2")).click();
+	}
+	
+	private void optionEleven() {
+		//OK Cancel dialog with Holo Light theme
+		driver.findElement(AppiumBy.id("io.appium.android.apis:id/two_buttons_holo_light")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.xpath("//android.widget.LinearLayout[@resource-id='android:id/parentPanel']")).getAttribute("enabled").equals("true"));
+		//Click OK
+		driver.findElement(AppiumBy.id("android:id/button1")).click();
+		//Click Cancel
+		driver.findElement(AppiumBy.xpath("//android.widget.Button[11]")).click();
+		Assert.assertTrue(driver.findElement(AppiumBy.id("android:id/alertTitle")).getText().contains("aie"));
 		driver.findElement(AppiumBy.id("android:id/button2")).click();
 	}
 
