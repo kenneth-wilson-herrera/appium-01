@@ -32,7 +32,8 @@ public class MiscAppium extends BaseTest{
 		//adb shell dumpsys window | grep -E 'mCurrentFocus'
 		//on Windows
 		//adb shell dumpsys window | find "mCurrentFocus"
-		Activity activity = new Activity("io.appium.android.apis","io.appium.android.apis.preference.PreferenceDependencies");
+		
+		//Activity activity = new Activity("io.appium.android.apis","io.appium.android.apis.preference.PreferenceDependencies");
 		//driver.startActivity(activity); -- deprecated
 		((JavascriptExecutor)driver).executeScript("mobile: startActivity", ImmutableMap.of("intent", "io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies"));
 		
