@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-04T22:55:54 MST" name="Default suite" finished-at="2024-04-04T22:57:08 MST" duration-ms="73858">
+  <suite started-at="2024-05-15T20:59:01 MDT" name="Default suite" finished-at="2024-05-15T20:59:20 MDT" duration-ms="18960">
     <groups>
     </groups>
-    <test started-at="2024-04-04T22:55:54 MST" name="Default test" finished-at="2024-04-04T22:57:08 MST" duration-ms="73858">
-      <class name="group_01.AssignmentS7">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-04-04T22:55:54 MST" name="ConfigureAppium" finished-at="2024-04-04T22:55:59 MST" duration-ms="5147" status="PASS">
+    <test started-at="2024-05-15T20:59:01 MDT" name="Default test" finished-at="2024-05-15T20:59:20 MDT" duration-ms="18960">
+      <class name="group_01.MiscAppium">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.MiscAppium@4802796d]" started-at="2024-05-15T20:59:01 MDT" name="ConfigureAppium" finished-at="2024-05-15T20:59:07 MDT" duration-ms="5549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="AlertDialogsTest()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-04-04T22:55:59 MST" name="AlertDialogsTest" finished-at="2024-04-04T22:57:08 MST" duration-ms="68408" status="PASS">
+        <test-method signature="MiscAppiumActions()[pri:0, instance:group_01.MiscAppium@4802796d]" started-at="2024-05-15T20:59:07 MDT" name="MiscAppiumActions" finished-at="2024-05-15T20:59:20 MDT" duration-ms="13171" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AlertDialogsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.AssignmentS7@59474f18]" started-at="2024-04-04T22:57:08 MST" name="tearDown" finished-at="2024-04-04T22:57:08 MST" duration-ms="267" status="PASS">
+        </test-method> <!-- MiscAppiumActions -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.MiscAppium@4802796d]" started-at="2024-05-15T20:59:20 MDT" name="tearDown" finished-at="2024-05-15T20:59:20 MDT" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- group_01.AssignmentS7 -->
+      </class> <!-- group_01.MiscAppium -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
