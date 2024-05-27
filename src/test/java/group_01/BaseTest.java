@@ -37,6 +37,8 @@ public class BaseTest {
 		
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("TestDevice1");
+		options.setChromedriverExecutable("C:\\Users\\kenny\\OneDrive\\Documents\\chromedriver-113\\chromedriver.exe");
+		
 		//options.setApp("\\Users\\kenny\\OneDrive\\Documents\\Appium-course-Rahul-Shetty\\resources\\ApiDemos-debug.apk");
 		options.setApp("\\Users\\kenny\\OneDrive\\Documents\\Appium-course-Rahul-Shetty\\resources\\General-Store.apk");
 		options.setCapability("autoGrantPermissions", true);
@@ -89,6 +91,11 @@ public class BaseTest {
 		.addAction(finger.createPointerUp(MouseButton.LEFT.asArg())); 
 		
 			driver.perform(Arrays.asList(clickPosition));
+	}
+	
+	public Double getFormattedAmount(String amount) {
+		Double price = Double.parseDouble(amount.substring(1));
+		return price;
 	}
 	
 	@AfterClass
