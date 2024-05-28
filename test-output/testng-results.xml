@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-26T22:00:48 MDT" name="Default suite" finished-at="2024-05-26T22:01:25 MDT" duration-ms="36998">
+  <suite started-at="2024-05-27T23:05:23 MDT" name="Default suite" finished-at="2024-05-27T23:05:41 MDT" duration-ms="17317">
     <groups>
     </groups>
-    <test started-at="2024-05-26T22:00:48 MDT" name="Default test" finished-at="2024-05-26T22:01:25 MDT" duration-ms="36998">
-      <class name="group_01.eCommerce_tc_4">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.eCommerce_tc_4@65fb9ffc]" started-at="2024-05-26T22:00:48 MDT" name="ConfigureAppium" finished-at="2024-05-26T22:00:55 MDT" duration-ms="7534" status="PASS">
+    <test started-at="2024-05-27T23:05:23 MDT" name="Default test" finished-at="2024-05-27T23:05:41 MDT" duration-ms="17317">
+      <class name="group_01.MobileBrowserTest">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:23 MDT" name="ConfigureAppium" finished-at="2024-05-27T23:05:35 MDT" duration-ms="11551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="FillForm()[pri:0, instance:group_01.eCommerce_tc_4@65fb9ffc]" started-at="2024-05-26T22:00:55 MDT" name="FillForm" finished-at="2024-05-26T22:01:24 MDT" duration-ms="28672" status="PASS">
+        <test-method signature="browserTest()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:35 MDT" name="browserTest" finished-at="2024-05-27T23:05:40 MDT" duration-ms="5370" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.eCommerce_tc_4@65fb9ffc]" started-at="2024-05-26T22:01:24 MDT" name="tearDown" finished-at="2024-05-26T22:01:25 MDT" duration-ms="738" status="PASS">
+        </test-method> <!-- browserTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:40 MDT" name="tearDown" finished-at="2024-05-27T23:05:41 MDT" duration-ms="364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- group_01.eCommerce_tc_4 -->
+      </class> <!-- group_01.MobileBrowserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
