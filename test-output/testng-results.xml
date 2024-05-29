@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-27T23:05:23 MDT" name="Default suite" finished-at="2024-05-27T23:05:41 MDT" duration-ms="17317">
+  <suite started-at="2024-05-28T23:28:49 MDT" name="Default suite" finished-at="2024-05-28T23:29:07 MDT" duration-ms="17951">
     <groups>
     </groups>
-    <test started-at="2024-05-27T23:05:23 MDT" name="Default test" finished-at="2024-05-27T23:05:41 MDT" duration-ms="17317">
+    <test started-at="2024-05-28T23:28:49 MDT" name="Default test" finished-at="2024-05-28T23:29:07 MDT" duration-ms="17951">
       <class name="group_01.MobileBrowserTest">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:23 MDT" name="ConfigureAppium" finished-at="2024-05-27T23:05:35 MDT" duration-ms="11551" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:group_01.MobileBrowserTest@47eaca72]" started-at="2024-05-28T23:28:49 MDT" name="ConfigureAppium" finished-at="2024-05-28T23:28:59 MDT" duration-ms="10715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="browserTest()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:35 MDT" name="browserTest" finished-at="2024-05-27T23:05:40 MDT" duration-ms="5370" status="PASS">
+        <test-method signature="browserTest()[pri:0, instance:group_01.MobileBrowserTest@47eaca72]" started-at="2024-05-28T23:28:59 MDT" name="browserTest" finished-at="2024-05-28T23:29:06 MDT" duration-ms="6783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.MobileBrowserTest@a1153bc]" started-at="2024-05-27T23:05:40 MDT" name="tearDown" finished-at="2024-05-27T23:05:41 MDT" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:group_01.MobileBrowserTest@47eaca72]" started-at="2024-05-28T23:29:06 MDT" name="tearDown" finished-at="2024-05-28T23:29:07 MDT" duration-ms="422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
